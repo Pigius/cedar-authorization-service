@@ -17,6 +17,8 @@ Once the server receives your request, it gets to work evaluating the policies. 
 
 Finally, the server returns the decision. If the policies permit the action for the given principal, resource, and context, the server will return a message saying "Authorization decision: allow.". If the policies deny the action, it will return a message saying "Authorization decision: deny.".
 
+ Keep in mind that this is a dummy authorization service, and it should not be used in production environments. 
+ 
 ## Getting Started
 This is a Rust server, so you'll need to have Rust and Cargo (the Rust package manager) installed on your machine to run it. If you don't have Rust and Cargo installed, you can download them from the [official Rust website](https://www.rust-lang.org/).
 
