@@ -64,3 +64,18 @@ curl -X POST -H "Content-Type: application/json" -d '{"policies": ["permit(princ
 }' "http://localhost:8080/evaluate"
 {"message":"Authorization decision: allow."}%
 ```
+
+## With Multiple Policies
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{
+    "policies": [
+        "permit(principal == UserType::\"Customer\", action == Action::\"View\", resource == Resource::\"Product\");",
+        "forbic(principal == UserType::\"Customer\", action == Action::\"Edit\", resource == Resource::\"Product\");"
+    ],
+    "resources": ["Resource::\"Product\""],
+    "action": "Action::\"Edit\"",
+    "principal": "UserType::\"Customer\"",
+    "context": {}
+}' "http://localhost:8080/evaluate"
+```
