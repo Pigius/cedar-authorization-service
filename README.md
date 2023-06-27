@@ -65,13 +65,13 @@ curl -X POST -H "Content-Type: application/json" -d '{"policies": ["permit(princ
 {"message":"Authorization decision: allow."}%
 ```
 
-## With Multiple Policies
+### With Multiple Policies
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "policies": [
         "permit(principal == UserType::\"Customer\", action == Action::\"View\", resource == Resource::\"Product\");",
-        "forbic(principal == UserType::\"Customer\", action == Action::\"Edit\", resource == Resource::\"Product\");"
+        "forbid(principal == UserType::\"Customer\", action == Action::\"Edit\", resource == Resource::\"Product\");"
     ],
     "resources": ["Resource::\"Product\""],
     "action": "Action::\"Edit\"",
