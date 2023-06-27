@@ -28,7 +28,7 @@ The endpoint for evaluation of the policies is `http://localhost:8080/evaluate`.
 
 ## Examples
 
-You can refer to the post here for explanations or you can use the examples below:
+You can refer to the [blogpost](https://dev.to/aws-builders/authorization-and-cedar-a-new-way-to-manage-permissions-part-ii-2bgb) for explanations or you can use the examples below:
 
 ### With Permit Policy
 
